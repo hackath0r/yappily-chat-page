@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Yappily Seller</title>
+ 	<link rel="icon" href="img/Favicon.png">
+ 	<link rel="stylesheet" type="text/css" href="style/lib/bootstrap.min.css">
+ 	<link rel="stylesheet" type="text/css" href="style/lib/font-awesome-4.6.3/css/font-awesome.css">
+ 	<link rel="stylesheet" type="text/css" href="style/main.css">
+ 	<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+ 	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+ 	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+ 	<script type="text/javascript" src="js/chat.module.js"></script>
+ 	<script type="text/javascript" src="js/home/home.module.js"></script>
+ 	<script type="text/javascript" src="js/home/home.controller.js"></script>
+</head>
+<body ng-app="chat">
+	<nav></nav>
+	<div class="container" ng-controller="HomeCtrl">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="row">
+					<div class="col-xs-12">
+						<input class="form-control" type="text" name="Search" ng-model="query">
+					</div>
+					<div class="col-xs-12">
+						<ul class="list-group">
+							<li ng-click="showChat(user)" class="list-group-item" ng-repeat="user in userList | filter: query">
+								<div class="row">
+									<div class="col-xs-2">
+										<img style="width: 50px;" ng-src="{{user.profile_pic}}">
+									</div>
+									<div class="col-xs-10">
+										<div class="row">
+											<div class="col-xs-10">
+												<p>{{user.first_name}} {{user.last_name}}</p>
+											</div>
+											<div class="col-xs-2">
+												<p>{{user.last_msg_timestamp}}</p>
+											</div>
+											<div class="col-xs-12">
+												<p>{{user.last_msg}}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>	
+					</div>
+				</div>	
+			</div>
+			<div class="col-md-8">
+				<div class="row">
+					<div class="col-xs-12">
+						<p>{{selectedUser.first_name}} {{selectedUser.last_name}}</p>
+					</div>
+					<div class="col-xs-12">
+						<ul class="list-group">
+							<li class="list-group-item" ng-repeat="chat in conv">
+								<div class="row">
+									<div class="col-xs-3">
+										<img ng-src="{{($index % 2 == 0) ? currentLoggedInUser.profile_pic : selectedUser.profile_pic}}">
+									</div>
+									<div class="col-xs-9">
+										<div class="row">
+											<div class="col-xs-8">
+												{{($index % 2 == 0) ? currentLoggedInUser.name : (selectedUser.first_name + ' ' + selectedUser.last_name)}}
+											</div>
+											<div class="col-xs-4">
+												<p>{{chat.timestamp}}</p>
+											</div>
+											<div class="col-xs-12">
+												<p>{{chat.message}}</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+		</div>
+	</div>
+</body>
+</html>

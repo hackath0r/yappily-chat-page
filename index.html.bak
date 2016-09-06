@@ -22,10 +22,6 @@
 	<nav></nav>
 	<div class="container" ng-controller="HomeCtrl">
 		<div class="row">
-			<form id="user-name-input" action="#">
-        <p> Enter Your Name: <input type='text' id="username"> </p>
-        <button> Enter Chat </button>
-      </form>
 			<div class="col-md-4">
 				<div class="row">
 					<div class="col-xs-12" id="search-box">
@@ -46,14 +42,13 @@
 									<div class="col-md-9 col-xs-10">
 										<div class="row">
 											<div class="col-xs-9" id="user-name">
-												<!--<p>{{user.first_name}} {{user.last_name}}</p>-->
-												<p>{{user.name}}</p>
+												<p>{{user.first_name}} {{user.last_name}}</p>
 											</div>
 											<div class="col-xs-3" id="user-time">
-												<!--<p>{{user.last_msg_timestamp}}</p>-->
+												<p>{{user.last_msg_timestamp}}</p>
 											</div>
 											<div class="col-xs-9" id="last_msg">
-												<!--<p>{{user.last_msg}}</p>-->
+												<p>{{user.last_msg}}</p>
 											</div>
 										</div>
 									</div>
@@ -66,27 +61,22 @@
 			<div class="col-md-8" style="position:relative">
 				<div class="row">
 					<div class="col-xs-12 h3" id="chat-head">
-						<!--<p>{{selectedUser.first_name}} {{selectedUser.last_name}}</p>-->
-						<p>{{selectedUser.name}}</p>
+						<p>{{selectedUser.first_name}} {{selectedUser.last_name}}</p>
 					</div>
 					<div class="col-xs-12" id="chat-container">
 						<ul class="list-group">
 							<li class="list-group-item" ng-repeat="chat in conv">
 								<div class="row">
 									<div class="col-xs-2" id="chat_pic">
-										<!--<img ng-src="{{($index % 2 == 0) ? currentLoggedInUser.profile_pic : selectedUser.profile_pic}}"> -->
-										<img ng-src="{{chat.profile_pic}}">
+										<img ng-src="{{($index % 2 == 0) ? currentLoggedInUser.profile_pic : selectedUser.profile_pic}}">
 									</div>
 									<div class="col-xs-10">
 										<div class="row">
-											<!--<div class="col-xs-8" id="name">
-												{{($index % 2 == 0) ? currentLoggedInUser.name : (selectedUser.first_name + ' ' + selectedUser.last_name)}}
-											</div>-->
 											<div class="col-xs-8" id="name">
-												{{chat.name}}
+												{{($index % 2 == 0) ? currentLoggedInUser.name : (selectedUser.first_name + ' ' + selectedUser.last_name)}}
 											</div>
 											<div class="col-xs-4" id="time">
-												<!--<p>{{chat.timestamp}}</p>-->
+												<p>{{chat.timestamp}}</p>
 											</div>
 											<div class="col-xs-12">
 												<p>{{chat.message}}</p>
@@ -97,10 +87,10 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-xs-12" id="txt-area" ng-hide="hidden">
+					<div class="col-xs-12" id="txt-area">
 						<div class="row">
 							<div class="col-xs-12">
-								<textarea class="form-control" rows="3" placeholder="write a reply..." ng-model="newMessage"></textarea>
+								<textarea class="form-control" rows="3" placeholder="write a reply..."></textarea>
 							</div>
 							<div class="col-xs-12">
 								<div class="row" id="attachments">
@@ -117,7 +107,7 @@
 										</a>
 									</div>
 									<div class="col-xs-7" id="submit_btn">
-										<button class="btn btn-default" href="" ng-click="addMessage()" ng-disabled="disabled">Submit</button>
+										<button class="btn btn-default" href="">Submit</button>
 									</div>
 								</div>
 							</div>

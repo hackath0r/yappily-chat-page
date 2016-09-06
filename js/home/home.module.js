@@ -1,3 +1,3 @@
 (function(){
-	angular.module('home', []);
+	angular.module('home', ['firebase']);
 })();

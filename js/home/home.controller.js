@@ -18,7 +18,6 @@
 				 	$scope.conv = response.data;
 				 });
 				$scope.class = "selected";
-			
 			}
 		});
 })();

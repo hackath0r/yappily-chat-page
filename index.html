@@ -2,7 +2,7 @@
 <html lang="en">
 <head> 
 	<meta charset="utf-8">
-	<title>Yappily Seller</title>
+	<title>Yappily Chat</title>
  	<link rel="icon" href="img/Favicon.png">
  	<link rel="stylesheet" type="text/css" href="style/lib/bootstrap.min.css">
  	<link rel="stylesheet" type="text/css" href="style/lib/font-awesome-4.6.3/css/font-awesome.css">
@@ -54,7 +54,7 @@
 					</div>
 				</div>	
 			</div>
-			<div class="col-md-8">
+			<div class="col-md-8" style="position:relative">
 				<div class="row">
 					<div class="col-xs-12 h3" id="chat-head">
 						<p>{{selectedUser.first_name}} {{selectedUser.last_name}}</p>
@@ -83,7 +83,11 @@
 							</li>
 						</ul>
 					</div>
-					<div class="col-xs-12">
+					<div class="col-xs-12" id="txt-area">
+						<textarea class="form-control" rows="3" placeholder="write a reply..."></textarea>
+						<!-- <div id="submit_btn">
+							<button class="btn btn-default" href="">Submit</button>
+						</div> -->
 					</div>
 				</div>	
 			</div>

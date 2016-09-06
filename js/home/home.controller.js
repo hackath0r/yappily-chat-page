@@ -17,6 +17,8 @@
 				 .then(function(response){
 				 	$scope.conv = response.data;
 				 });
+				$scope.class = "selected";
+			
 			}
 		});
 })();

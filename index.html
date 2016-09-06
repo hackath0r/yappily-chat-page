@@ -3,16 +3,16 @@
 <head> 
 	<meta charset="utf-8">
 	<title>Yappily Chat</title>
- 	<link rel="icon" href="img/Favicon.png">
- 	<link rel="stylesheet" type="text/css" href="style/lib/bootstrap.min.css">
- 	<link rel="stylesheet" type="text/css" href="style/lib/font-awesome-4.6.3/css/font-awesome.css">
- 	<link rel="stylesheet" type="text/css" href="style/main.css">
- 	<script type="text/javascript" src="js/lib/jquery.min.js"></script>
- 	<script type="text/javascript" src="js/lib/angular.min.js"></script>
- 	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
- 	<script type="text/javascript" src="js/chat.module.js"></script>
- 	<script type="text/javascript" src="js/home/home.module.js"></script>
- 	<script type="text/javascript" src="js/home/home.controller.js"></script>
+	<link rel="icon" href="img/Favicon.png">
+	<link rel="stylesheet" type="text/css" href="style/lib/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style/lib/font-awesome-4.6.3/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+	<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+	<script type="text/javascript" src="js/lib/angular.min.js"></script>
+	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/chat.module.js"></script>
+	<script type="text/javascript" src="js/home/home.module.js"></script>
+	<script type="text/javascript" src="js/home/home.controller.js"></script>
 </head>
 <body ng-app="chat">
 	<nav></nav>
@@ -84,10 +84,30 @@
 						</ul>
 					</div>
 					<div class="col-xs-12" id="txt-area">
-						<textarea class="form-control" rows="3" placeholder="write a reply..."></textarea>
-						<!-- <div id="submit_btn">
-							<button class="btn btn-default" href="">Submit</button>
-						</div> -->
+						<div class="row">
+							<div class="col-xs-12">
+								<textarea class="form-control" rows="3" placeholder="write a reply..."></textarea>
+							</div>
+							<div class="col-xs-12">	
+								<div class="row" id="attachments">
+									<div class="col-xs-2" id="file">
+										<a href="">
+											<img src="img/paperclip.png">
+											<span> Add files</span>
+										</a>
+									</div>
+									<div class="col-xs-3" id="photo">
+										<a href="">
+											<i class="fa fa-camera" aria-hidden="true"></i>
+											<span> Add photos</span>
+										</a>
+									</div>
+									<div class="col-xs-7" id="submit_btn">
+										<button class="btn btn-default" href="">Submit</button>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>	
 			</div>

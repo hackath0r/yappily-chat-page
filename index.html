@@ -32,10 +32,10 @@
 						<ul class="list-group">
 							<li ng-click="showChat(user)" class="list-group-item" ng-repeat="user in userList | filter: query" ng-class="(selectedUser === user) ? 'selected' : ''  ">
 								<div class="row">
-									<div class="col-xs-3" id="profile_pic">
+									<div class="col-md-3 col-xs-2" id="profile_pic">
 										<img ng-src="{{user.profile_pic}}">
 									</div>
-									<div class="col-xs-9">
+									<div class="col-md-9 col-xs-10">
 										<div class="row">
 											<div class="col-xs-9" id="user-name">
 												<p>{{user.first_name}} {{user.last_name}}</p>

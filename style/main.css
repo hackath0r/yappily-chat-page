@@ -79,7 +79,7 @@ text-area {
 }
 #list-container {
 	margin-top: 40px;
-	max-height: 92vh;
+	max-height: 94vh;
     overflow-y:scroll; 
 }
 #file, #photo {
